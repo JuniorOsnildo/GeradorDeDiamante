@@ -1,20 +1,18 @@
 ﻿
 using DiamondGenerator;
 
-bool run = true;
 
-while (run)
+var num = 0;
+bool validar = true;
+
+while (validar)
 {
-    bool validar = true;
+    Console.Clear();
+    Console.WriteLine("Digite um valor ímpar");
+    num = int.Parse(Console.ReadLine() ?? "3");
 
-    while (validar)
-    {
-        Console.Clear();
-        Console.WriteLine("Digite um valor ímpar");
-        var num = int.Parse(Console.ReadLine() ?? "3");
-
-        if (Diamante.ValidarNumero(num)) validar = false;
-
-    }
+    if (Diamante.ValidarNumero(num)) validar = false;
 
 }
+Console.Clear();
+Diamante.Diamond(num);
