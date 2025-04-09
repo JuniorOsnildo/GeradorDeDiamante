@@ -10,8 +10,18 @@ public class Diamante
     }
     
     
+    //ADICIONA CHARACTERES BRANCOS
+    private static void AddBrancos(int branco)
+    {
+        for (int j = 0; j <= branco; j++)
+        {
+            Console.Write(" ");
+        }
+    }
+    
+    
     //GERA O DIAMANTE
-    public static void Diamond(int numero)
+    public static void GerarDiamante(int numero)
     {
         int medio = numero / 2;
         int branco = medio-1;
@@ -20,10 +30,7 @@ public class Diamante
         for (int i = 0; i < numero; i++)
         {
             
-            for (int j = 0; j <= branco; j++)
-            {
-                Console.Write(" ");
-            }
+            AddBrancos(branco);
 
             if (i < medio)
             {
@@ -41,10 +48,7 @@ public class Diamante
                 Console.Write(x);
             }
             
-            for (int j = 0; j <= branco; j++)
-            {
-                Console.Write(" ");
-            }
+            AddBrancos(branco);
 
             if (i < medio)
             {
