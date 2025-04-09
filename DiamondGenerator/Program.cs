@@ -15,4 +15,4 @@ while (validar)
 
 }
 Console.Clear();
-Diamante.Diamond(num);
+Diamante.GerarDiamante(num);
